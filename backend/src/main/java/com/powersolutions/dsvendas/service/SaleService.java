@@ -17,7 +17,7 @@ import com.powersolutions.dsvendas.repositories.SellerRepository;
 
 @Service
 public class SaleService {
-
+	
 	@Autowired
 	private SaleRepository repository;
 	
@@ -28,7 +28,7 @@ public class SaleService {
 	public Page<SaleDTO> findAll(Pageable pageable) {
 		sellerRepository.findAll();
 		Page<Sale> result = repository.findAll(pageable);
-		return result.map(x -> new SaleDTO(x));
+		return result.map(x -> new SaleDTO(x));	
 	}
 	
 	@Transactional(readOnly = true)

@@ -13,11 +13,11 @@ import com.powersolutions.dsvendas.service.SellerService;
 
 @RestController
 @RequestMapping(value = "/sellers")
-public class SellerControler {
-
-	@Autowired
-	private SellerService service;
+public class SellerController {
 	
+	@Autowired 
+	private SellerService service;
+
 	@GetMapping
 	public ResponseEntity<List<SellerDTO>> findAll() {
 		List<SellerDTO> list = service.findAll();

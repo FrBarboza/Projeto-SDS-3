@@ -14,7 +14,7 @@ public class SaleDTO {
 	
 	private SellerDTO seller;
 	
-	public SaleDTO() {
+	public SaleDTO() {	
 	}
 
 	public SaleDTO(Long id, Integer visited, Integer deals, Double amount, LocalDate date, SellerDTO seller) {

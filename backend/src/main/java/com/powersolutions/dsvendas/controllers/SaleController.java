@@ -15,13 +15,13 @@ import com.powersolutions.dsvendas.dto.SaleSuccessDTO;
 import com.powersolutions.dsvendas.dto.SaleSumDTO;
 import com.powersolutions.dsvendas.service.SaleService;
 
-@RestController	
+@RestController
 @RequestMapping(value = "/sales")
-public class SaleControler {
-
-	@Autowired
-	private SaleService service;
+public class SaleController {
 	
+	@Autowired 
+	private SaleService service;
+
 	@GetMapping
 	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable) {
 		Page<SaleDTO> list = service.findAll(pageable);
